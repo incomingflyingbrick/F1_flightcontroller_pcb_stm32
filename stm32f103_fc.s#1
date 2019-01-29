@@ -5948,9 +5948,9 @@ Example: SX-32S</description>
 <attribute name="NAME" x="118.364" y="17.78" size="1.27" layer="95" rot="R90"/>
 <attribute name="VALUE" x="124.206" y="17.78" size="1.27" layer="96" rot="R90"/>
 </instance>
-<instance part="J1" gate="G$1" x="-10.16" y="-2.54" smashed="yes">
-<attribute name="VALUE" x="-10.16" y="-2.286" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="-10.16" y="53.848" size="1.778" layer="95" font="vector"/>
+<instance part="J1" gate="G$1" x="-22.86" y="-2.54" smashed="yes">
+<attribute name="VALUE" x="-22.86" y="-2.286" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="-22.86" y="53.848" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="J2" gate="G$1" x="-50.8" y="-2.54" smashed="yes">
 <attribute name="VALUE" x="-50.8" y="-2.286" size="1.778" layer="96" font="vector"/>

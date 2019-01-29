@@ -5948,13 +5948,13 @@ Example: SX-32S</description>
 <attribute name="NAME" x="118.364" y="17.78" size="1.27" layer="95" rot="R90"/>
 <attribute name="VALUE" x="124.206" y="17.78" size="1.27" layer="96" rot="R90"/>
 </instance>
-<instance part="J1" gate="G$1" x="-22.86" y="-2.54" smashed="yes">
-<attribute name="VALUE" x="-22.86" y="-2.286" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="-22.86" y="53.848" size="1.778" layer="95" font="vector"/>
+<instance part="J1" gate="G$1" x="-48.26" y="5.08" smashed="yes">
+<attribute name="VALUE" x="-48.26" y="5.334" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="-48.26" y="61.468" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="J2" gate="G$1" x="-50.8" y="-2.54" smashed="yes">
-<attribute name="VALUE" x="-50.8" y="-2.286" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="-50.8" y="53.848" size="1.778" layer="95" font="vector"/>
+<instance part="J2" gate="G$1" x="-53.34" y="63.5" smashed="yes" rot="R180">
+<attribute name="VALUE" x="-53.34" y="63.246" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="-53.34" y="7.112" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="J3" gate="J1" x="-58.42" y="86.36" smashed="yes">
 <attribute name="VALUE" x="-60.96" y="76.454" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
@@ -6149,6 +6149,16 @@ Example: SX-32S</description>
 <wire x1="25.4" y1="27.94" x2="12.7" y2="27.94" width="0.1524" layer="91"/>
 <label x="12.7" y="27.94" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="15.24" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
+<label x="-33.02" y="15.24" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="58.42" x2="-71.12" y2="58.42" width="0.1524" layer="91"/>
+<label x="-71.12" y="58.42" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -6325,6 +6335,21 @@ Example: SX-32S</description>
 <wire x1="35.56" y1="-2.54" x2="25.4" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="-2.54" x2="25.4" y2="7.62" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
+<label x="-33.02" y="12.7" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="10.16" x2="-33.02" y2="10.16" width="0.1524" layer="91"/>
+<label x="-33.02" y="10.16" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="55.88" x2="-71.12" y2="55.88" width="0.1524" layer="91"/>
+<label x="-71.12" y="55.88" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="5V" class="0">
 <segment>
@@ -6353,6 +6378,11 @@ Example: SX-32S</description>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="-35.56" y1="76.2" x2="-35.56" y2="71.12" width="0.1524" layer="91"/>
 <label x="-35.56" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="53.34" x2="-71.12" y2="53.34" width="0.1524" layer="91"/>
+<label x="-71.12" y="53.34" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -6387,6 +6417,11 @@ Example: SX-32S</description>
 <wire x1="134.62" y1="55.88" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
 <label x="144.78" y="55.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="55.88" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
+<label x="-33.02" y="55.88" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="19"/>
+</segment>
 </net>
 <net name="RESET" class="0">
 <segment>
@@ -6407,6 +6442,11 @@ Example: SX-32S</description>
 <wire x1="121.92" y1="27.94" x2="121.92" y2="25.4" width="0.1524" layer="91"/>
 <junction x="121.92" y="25.4"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
+<label x="-33.02" y="17.78" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="4"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -6425,6 +6465,11 @@ Example: SX-32S</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA11"/>
 <wire x1="81.28" y1="73.66" x2="86.36" y2="73.66" width="0.1524" layer="91"/>
 <label x="86.36" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="27.94" x2="-71.12" y2="27.94" width="0.1524" layer="91"/>
+<label x="-71.12" y="27.94" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="13"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -6448,6 +6493,11 @@ Example: SX-32S</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA12"/>
 <wire x1="81.28" y1="76.2" x2="86.36" y2="76.2" width="0.1524" layer="91"/>
 <label x="86.36" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="30.48" x2="-71.12" y2="30.48" width="0.1524" layer="91"/>
+<label x="-71.12" y="30.48" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="12"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -6510,6 +6560,11 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="25.4" x2="88.9" y2="25.4" width="0.1524" layer="91"/>
 <label x="88.9" y="25.4" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="53.34" x2="-33.02" y2="53.34" width="0.1524" layer="91"/>
+<label x="-33.02" y="53.34" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="18"/>
+</segment>
 </net>
 <net name="PC15" class="0">
 <segment>
@@ -6529,6 +6584,11 @@ Example: SX-32S</description>
 <label x="88.9" y="27.94" size="1.778" layer="95"/>
 <label x="88.9" y="27.94" size="1.778" layer="95"/>
 <label x="88.9" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="50.8" x2="-33.02" y2="50.8" width="0.1524" layer="91"/>
+<label x="-33.02" y="50.8" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="17"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
@@ -6561,12 +6621,22 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="-5.08" x2="91.44" y2="-5.08" width="0.1524" layer="91"/>
 <label x="91.44" y="-5.08" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="20"/>
+<wire x1="-38.1" y1="58.42" x2="-33.02" y2="58.42" width="0.1524" layer="91"/>
+<label x="-33.02" y="58.42" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PA0" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA0"/>
 <wire x1="35.56" y1="83.82" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
 <label x="30.48" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="48.26" x2="-33.02" y2="48.26" width="0.1524" layer="91"/>
+<label x="-33.02" y="48.26" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="16"/>
 </segment>
 </net>
 <net name="PA1" class="0">
@@ -6575,12 +6645,22 @@ Example: SX-32S</description>
 <wire x1="35.56" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
 <label x="30.48" y="81.28" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="45.72" x2="-33.02" y2="45.72" width="0.1524" layer="91"/>
+<label x="-33.02" y="45.72" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="15"/>
+</segment>
 </net>
 <net name="PA2" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA2"/>
 <wire x1="35.56" y1="78.74" x2="30.48" y2="78.74" width="0.1524" layer="91"/>
 <label x="30.48" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="43.18" x2="-33.02" y2="43.18" width="0.1524" layer="91"/>
+<label x="-33.02" y="43.18" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="14"/>
 </segment>
 </net>
 <net name="PA3" class="0">
@@ -6589,12 +6669,22 @@ Example: SX-32S</description>
 <wire x1="35.56" y1="76.2" x2="30.48" y2="76.2" width="0.1524" layer="91"/>
 <label x="30.48" y="76.2" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="40.64" x2="-33.02" y2="40.64" width="0.1524" layer="91"/>
+<label x="-33.02" y="40.64" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="13"/>
+</segment>
 </net>
 <net name="PA4" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA4"/>
 <wire x1="35.56" y1="73.66" x2="30.48" y2="73.66" width="0.1524" layer="91"/>
 <label x="30.48" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="38.1" x2="-33.02" y2="38.1" width="0.1524" layer="91"/>
+<label x="-33.02" y="38.1" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="12"/>
 </segment>
 </net>
 <net name="PA5" class="0">
@@ -6603,12 +6693,22 @@ Example: SX-32S</description>
 <label x="30.48" y="71.12" size="1.778" layer="95"/>
 <pinref part="IC1" gate="PORTA_L" pin="PA5"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="35.56" x2="-33.02" y2="35.56" width="0.1524" layer="91"/>
+<label x="-33.02" y="35.56" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="11"/>
+</segment>
 </net>
 <net name="PA6" class="0">
 <segment>
 <wire x1="35.56" y1="68.58" x2="30.48" y2="68.58" width="0.1524" layer="91"/>
 <label x="30.48" y="68.58" size="1.778" layer="95"/>
 <pinref part="IC1" gate="PORTA_L" pin="PA6"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="33.02" x2="-33.02" y2="33.02" width="0.1524" layer="91"/>
+<label x="-33.02" y="33.02" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="10"/>
 </segment>
 </net>
 <net name="PA7" class="0">
@@ -6617,12 +6717,22 @@ Example: SX-32S</description>
 <label x="30.48" y="66.04" size="1.778" layer="95"/>
 <pinref part="IC1" gate="PORTA_L" pin="PA7"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
+<label x="-33.02" y="30.48" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="9"/>
+</segment>
 </net>
 <net name="PB0" class="0">
 <segment>
 <wire x1="35.56" y1="38.1" x2="30.48" y2="38.1" width="0.1524" layer="91"/>
 <label x="30.48" y="38.1" size="1.778" layer="95"/>
 <pinref part="IC1" gate="PORTB_L" pin="PB0"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="27.94" x2="-33.02" y2="27.94" width="0.1524" layer="91"/>
+<label x="-33.02" y="27.94" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="8"/>
 </segment>
 </net>
 <net name="PB1" class="0">
@@ -6631,12 +6741,22 @@ Example: SX-32S</description>
 <label x="30.48" y="40.64" size="1.778" layer="95"/>
 <pinref part="IC1" gate="PORTB_L" pin="PB1"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="25.4" x2="-33.02" y2="25.4" width="0.1524" layer="91"/>
+<label x="-33.02" y="25.4" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="7"/>
+</segment>
 </net>
 <net name="PB7" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB7"/>
 <wire x1="35.56" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
 <label x="27.94" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="45.72" x2="-71.12" y2="45.72" width="0.1524" layer="91"/>
+<label x="-71.12" y="45.72" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="PB6" class="0">
@@ -6645,12 +6765,22 @@ Example: SX-32S</description>
 <wire x1="35.56" y1="53.34" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
 <label x="27.94" y="53.34" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="43.18" x2="-71.12" y2="43.18" width="0.1524" layer="91"/>
+<label x="-71.12" y="43.18" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="7"/>
+</segment>
 </net>
 <net name="PB5" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB5"/>
 <wire x1="35.56" y1="50.8" x2="27.94" y2="50.8" width="0.1524" layer="91"/>
 <label x="27.94" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="40.64" x2="-71.12" y2="40.64" width="0.1524" layer="91"/>
+<label x="-71.12" y="40.64" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="8"/>
 </segment>
 </net>
 <net name="PB4" class="0">
@@ -6659,12 +6789,22 @@ Example: SX-32S</description>
 <wire x1="35.56" y1="48.26" x2="27.94" y2="48.26" width="0.1524" layer="91"/>
 <label x="27.94" y="48.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="38.1" x2="-71.12" y2="38.1" width="0.1524" layer="91"/>
+<label x="-71.12" y="38.1" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="9"/>
+</segment>
 </net>
 <net name="PB3" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB3"/>
 <wire x1="35.56" y1="45.72" x2="27.94" y2="45.72" width="0.1524" layer="91"/>
 <label x="27.94" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="35.56" x2="-71.12" y2="35.56" width="0.1524" layer="91"/>
+<label x="-71.12" y="35.56" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="10"/>
 </segment>
 </net>
 <net name="PA10" class="0">
@@ -6673,12 +6813,22 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
 <label x="86.36" y="71.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="25.4" x2="-71.12" y2="25.4" width="0.1524" layer="91"/>
+<label x="-71.12" y="25.4" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="14"/>
+</segment>
 </net>
 <net name="PA9" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_H" pin="PA9"/>
 <wire x1="81.28" y1="68.58" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
 <label x="86.36" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="22.86" x2="-71.12" y2="22.86" width="0.1524" layer="91"/>
+<label x="-71.12" y="22.86" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="15"/>
 </segment>
 </net>
 <net name="PA8" class="0">
@@ -6687,12 +6837,22 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="66.04" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
 <label x="86.36" y="66.04" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="20.32" x2="-71.12" y2="20.32" width="0.1524" layer="91"/>
+<label x="-71.12" y="20.32" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="16"/>
+</segment>
 </net>
 <net name="PB8" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_H" pin="PB8"/>
 <wire x1="81.28" y1="55.88" x2="86.36" y2="55.88" width="0.1524" layer="91"/>
 <label x="86.36" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="48.26" x2="-71.12" y2="48.26" width="0.1524" layer="91"/>
+<label x="-71.12" y="48.26" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="PB9" class="0">
@@ -6701,12 +6861,22 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
 <label x="86.36" y="53.34" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="50.8" x2="-71.12" y2="50.8" width="0.1524" layer="91"/>
+<label x="-71.12" y="50.8" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="4"/>
+</segment>
 </net>
 <net name="PB10" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_H" pin="PB10"/>
 <wire x1="81.28" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
 <label x="86.36" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-38.1" y1="22.86" x2="-33.02" y2="22.86" width="0.1524" layer="91"/>
+<label x="-33.02" y="22.86" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="PB11" class="0">
@@ -6715,12 +6885,22 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="48.26" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
 <label x="86.36" y="48.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-38.1" y1="20.32" x2="-33.02" y2="20.32" width="0.1524" layer="91"/>
+<label x="-33.02" y="20.32" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="5"/>
+</segment>
 </net>
 <net name="PB12" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_H" pin="PB12"/>
 <wire x1="81.28" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
 <label x="86.36" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="10.16" x2="-71.12" y2="10.16" width="0.1524" layer="91"/>
+<label x="-71.12" y="10.16" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="20"/>
 </segment>
 </net>
 <net name="PB13" class="0">
@@ -6729,6 +6909,11 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="43.18" x2="86.36" y2="43.18" width="0.1524" layer="91"/>
 <label x="86.36" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="12.7" x2="-71.12" y2="12.7" width="0.1524" layer="91"/>
+<label x="-71.12" y="12.7" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="19"/>
+</segment>
 </net>
 <net name="PB14" class="0">
 <segment>
@@ -6736,12 +6921,22 @@ Example: SX-32S</description>
 <wire x1="81.28" y1="40.64" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
 <label x="86.36" y="40.64" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="-63.5" y1="15.24" x2="-71.12" y2="15.24" width="0.1524" layer="91"/>
+<label x="-71.12" y="15.24" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="18"/>
+</segment>
 </net>
 <net name="PB15" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_H" pin="PB15"/>
 <wire x1="81.28" y1="38.1" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
 <label x="86.36" y="38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="17.78" x2="-71.12" y2="17.78" width="0.1524" layer="91"/>
+<label x="-71.12" y="17.78" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="17"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -6767,6 +6962,11 @@ Example: SX-32S</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA15"/>
 <wire x1="81.28" y1="83.82" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
 <label x="86.36" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-63.5" y1="33.02" x2="-71.12" y2="33.02" width="0.1524" layer="91"/>
+<label x="-71.12" y="33.02" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="11"/>
 </segment>
 </net>
 </nets>
