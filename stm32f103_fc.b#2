@@ -402,6 +402,44 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-1.27" y="1.397" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="-1.27" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 </package>
+<package name="1X03" urn="urn:adsk.eagle:footprint:37678/1" library_version="1">
+<description>&lt;h3&gt;Plated Through Hole - 3 Pin&lt;/h3&gt;
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count:3&lt;/li&gt;
+&lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;CONN_03&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="3.81" y1="0.635" x2="4.445" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="4.445" y1="1.27" x2="5.715" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="5.715" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="6.35" y1="-0.635" x2="5.715" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="5.715" y1="-1.27" x2="4.445" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="4.445" y1="-1.27" x2="3.81" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="6.35" y1="0.635" x2="6.35" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="5.08" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<text x="-1.27" y="1.397" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-1.27" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="2X3-NS" urn="urn:adsk.eagle:package:38013/1" type="box" library_version="1">
@@ -442,6 +480,19 @@ CONN_04
 </description>
 <packageinstances>
 <packageinstance name="1X04"/>
+</packageinstances>
+</package3d>
+<package3d name="1X03" urn="urn:adsk.eagle:package:38063/1" type="box" library_version="1">
+<description>Plated Through Hole - 3 Pin
+Specifications:
+Pin count:3
+Pin pitch:0.1"
+
+Example device(s):
+CONN_03
+</description>
+<packageinstances>
+<packageinstance name="1X03"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1595,6 +1646,14 @@ design rules under a new name.</description>
 <attribute name="SF_SKU" value="COM-08720" x="48.26" y="5.08" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="48.26" y="2.413" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
+<element name="SERVO_X" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X03" package3d_urn="urn:adsk.eagle:package:38063/1" value="" x="17.78" y="-10.16" smashed="yes">
+<attribute name="NAME" x="16.51" y="-8.763" size="0.6096" layer="25" font="vector" ratio="20"/>
+<attribute name="VALUE" x="16.51" y="-12.192" size="0.6096" layer="27" font="vector" ratio="20"/>
+</element>
+<element name="SERVO_Y" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X03" package3d_urn="urn:adsk.eagle:package:38063/1" value="" x="17.78" y="-13.97" smashed="yes">
+<attribute name="NAME" x="16.51" y="-12.573" size="0.6096" layer="25" font="vector" ratio="20"/>
+<attribute name="VALUE" x="16.51" y="-16.002" size="0.6096" layer="27" font="vector" ratio="20"/>
+</element>
 </elements>
 <signals>
 <signal name="VCC3V3">
@@ -1950,6 +2009,16 @@ design rules under a new name.</description>
 <wire x1="43.02125" y1="35.3752625" x2="43.02125" y2="37.1475" width="0.1524" layer="1"/>
 <wire x1="39.6525" y1="22.59" x2="39.005" y2="22.59" width="0.1524" layer="1"/>
 <wire x1="39.005" y1="22.59" x2="38.735" y2="22.86" width="0.1524" layer="1"/>
+<polygon width="0.1524" layer="1">
+<vertex x="15.24" y="85.09"/>
+<vertex x="15.24" y="-7.62"/>
+<vertex x="83.82" y="-7.62"/>
+<vertex x="83.82" y="85.09"/>
+</polygon>
+<contactref element="SERVO_X" pad="1"/>
+<contactref element="SERVO_Y" pad="1"/>
+<wire x1="17.78" y1="-10.16" x2="38.735" y2="13.6525" width="0" layer="19" extent="1-1"/>
+<wire x1="17.78" y1="-13.97" x2="17.78" y2="-10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="5V">
 <contactref element="J3" pad="VBUS"/>
@@ -1995,6 +2064,10 @@ design rules under a new name.</description>
 <wire x1="34.76625" y1="50.8" x2="34.71" y2="50.8" width="0.1524" layer="1"/>
 <via x="54.9275" y="55.88" extent="1-16" drill="0.35"/>
 <via x="35.8775" y="52.86375" extent="1-16" drill="0.35"/>
+<contactref element="SERVO_X" pad="2"/>
+<contactref element="SERVO_Y" pad="2"/>
+<wire x1="20.32" y1="-10.16" x2="29.845" y2="2.38125" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="-13.97" x2="20.32" y2="-10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R3" pad="2"/>
@@ -2256,9 +2329,13 @@ design rules under a new name.</description>
 </signal>
 <signal name="PA6">
 <contactref element="IC1" pad="16"/>
+<contactref element="SERVO_X" pad="3"/>
+<wire x1="22.86" y1="-10.16" x2="52.76" y2="38.12" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PA7">
 <contactref element="IC1" pad="17"/>
+<contactref element="SERVO_Y" pad="3"/>
+<wire x1="22.86" y1="-13.97" x2="52.76" y2="38.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PB0">
 <contactref element="IC1" pad="18"/>
@@ -2343,9 +2420,8 @@ design rules under a new name.</description>
 <wire x1="42.67555" y1="34.35615" x2="42.04055" y2="33.72115" width="0.1524" layer="1"/>
 <wire x1="43.5886" y1="37.9486" x2="42.9602375" y2="37.9486" width="0.1524" layer="1"/>
 <wire x1="42.9602375" y1="37.9486" x2="42.41165" y2="37.4000125" width="0.1524" layer="1"/>
-<wire x1="41.91" y1="29.21" x2="37.1" y2="24.4" width="0.1524" layer="1"/>
-<wire x1="37.1" y1="24.4" x2="37.1" y2="23.319875" width="0.1524" layer="1"/>
-<wire x1="37.1" y1="23.319875" x2="37.1" y2="23.1425" width="0" layer="19" extent="1-1"/>
+<wire x1="37.1" y1="24.4" x2="41.91" y2="29.21" width="0.1524" layer="1"/>
+<wire x1="37.1" y1="24.4" x2="37.1" y2="23.1425" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PB9">
 <contactref element="IC1" pad="46"/>
