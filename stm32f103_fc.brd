@@ -148,6 +148,11 @@
 <wire x1="79.68" y1="0" x2="79.68" y2="80" width="0" layer="20"/>
 <wire x1="79.68" y1="80" x2="20.32" y2="80" width="0" layer="20"/>
 <wire x1="20.32" y1="80" x2="20.32" y2="0" width="0" layer="20"/>
+<hole x="24.13" y="76.2" drill="2.95"/>
+<hole x="76.2" y="76.2" drill="2.95"/>
+<hole x="76.2" y="3.81" drill="2.95"/>
+<hole x="24.13" y="3.81" drill="2.95"/>
+<text x="39.37" y="76.2" size="1.778" layer="21">Space Pirate v1.0.0</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors" urn="urn:adsk.eagle:library:510">
@@ -2009,7 +2014,7 @@ design rules under a new name.</description>
 <wire x1="43.02125" y1="35.3752625" x2="43.02125" y2="37.1475" width="0.1524" layer="1"/>
 <wire x1="39.6525" y1="22.59" x2="39.005" y2="22.59" width="0.1524" layer="1"/>
 <wire x1="39.005" y1="22.59" x2="38.735" y2="22.86" width="0.1524" layer="1"/>
-<polygon width="0.1524" layer="1">
+<polygon width="0.1524" layer="1" isolate="0.254">
 <vertex x="15.24" y="85.09"/>
 <vertex x="15.24" y="-7.62"/>
 <vertex x="83.82" y="-7.62"/>
