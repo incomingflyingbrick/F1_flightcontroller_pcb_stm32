@@ -7182,6 +7182,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <plain>
 <text x="55.88" y="55.88" size="1.778" layer="91">to IMU data</text>
 <text x="55.88" y="53.34" size="1.778" layer="91">to IMU clk</text>
+<text x="-5.08" y="93.98" size="1.778" layer="91">checked</text>
+<text x="193.04" y="73.66" size="1.778" layer="91">checked</text>
+<text x="132.08" y="38.1" size="1.778" layer="91">checked</text>
 </plain>
 <instances>
 <instance part="HEADER" gate="G$1" x="0" y="78.74" smashed="yes">
