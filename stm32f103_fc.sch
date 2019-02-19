@@ -4750,6 +4750,33 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
+<package name="AXIAL-2.0" urn="urn:adsk.eagle:footprint:39618/1" library_version="1">
+<wire x1="-22.86" y1="-5.08" x2="-22.86" y2="5.08" width="0.127" layer="21"/>
+<wire x1="-22.86" y1="5.08" x2="24.13" y2="5.08" width="0.127" layer="21"/>
+<wire x1="24.13" y1="5.08" x2="24.13" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="24.13" y1="-5.08" x2="-22.86" y2="-5.08" width="0.127" layer="21"/>
+<pad name="P$1" x="-25.4" y="0" drill="0.8" diameter="1.778" shape="square"/>
+<pad name="P$2" x="26.67" y="0" drill="0.8" diameter="1.778" shape="square"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="0402" urn="urn:adsk.eagle:footprint:39625/1" library_version="1">
+<description>&lt;p&gt;&lt;b&gt;Generic 1005 (0402) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
+<wire x1="0.2704" y1="-0.2286" x2="-0.2704" y2="-0.2286" width="0.1524" layer="51"/>
+<wire x1="-1.2" y1="0.65" x2="1.2" y2="0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="0.65" x2="1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="-0.65" x2="-1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="-1.2" y1="-0.65" x2="-1.2" y2="0.65" width="0.0508" layer="39"/>
+<smd name="1" x="-0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<smd name="2" x="0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
+<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="AXIAL-0.3" urn="urn:adsk.eagle:package:39658/1" type="box" library_version="1">
@@ -4789,6 +4816,18 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <packageinstance name="0603"/>
 </packageinstances>
 </package3d>
+<package3d name="AXIAL-2.0" urn="urn:adsk.eagle:package:39652/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="AXIAL-2.0"/>
+</packageinstances>
+</package3d>
+<package3d name="0402" urn="urn:adsk.eagle:package:39657/1" type="box" library_version="1">
+<description>Generic 1005 (0402) package
+0.2mm courtyard excess rounded to nearest 0.05mm.</description>
+<packageinstances>
+<packageinstance name="0402"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="RESISTOR" urn="urn:adsk.eagle:symbol:39614/1" library_version="1">
@@ -4808,8 +4847,83 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="1KOHM" urn="urn:adsk.eagle:component:39763/1" prefix="R" library_version="1">
-<description>&lt;h3&gt;1kΩ resistor&lt;/h3&gt;
+<deviceset name="1OHM" urn="urn:adsk.eagle:component:39753/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;1Ω resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39650/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08269"/>
+<attribute name="VALUE" value="1"/>
+</technology>
+</technologies>
+</device>
+<device name="-AXIAL-2.0-10W-5%" package="AXIAL-2.0">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39652/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="22OHM" urn="urn:adsk.eagle:component:39755/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;22Ω resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0402-1/10W-1%" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39657/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12427"/>
+<attribute name="VALUE" value="22"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39650/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08698"/>
+<attribute name="VALUE" value="22"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10KOHM" urn="urn:adsk.eagle:component:39764/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;10kΩ resistor&lt;/h3&gt;
 &lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
@@ -4825,8 +4939,8 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-12182"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-12183" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4840,8 +4954,8 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-12182"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-12183"/>
+<attribute name="VALUE" value="10k"/>
 </technology>
 </technologies>
 </device>
@@ -4855,23 +4969,8 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-12182"/>
-<attribute name="VALUE" value="1k"/>
-</technology>
-</technologies>
-</device>
-<device name="-HORIZ_KIT-1/4W-1%" package="AXIAL-0.3-KIT">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-12182"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-12183" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4885,8 +4984,8 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-08380"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
 </technology>
 </technologies>
 </device>
@@ -4900,8 +4999,8 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-08380"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
 </technology>
 </technologies>
 </device>
@@ -4915,8 +5014,8 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-08380"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
 </technology>
 </technologies>
 </device>
@@ -4930,8 +5029,23 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-08380"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-1%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183"/>
+<attribute name="VALUE" value="10k"/>
 </technology>
 </technologies>
 </device>
@@ -4945,8 +5059,53 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-09769"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/6W-5%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39653/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ-1/6W-5%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39658/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/6W-5%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
 </technology>
 </technologies>
 </device>
@@ -4960,8 +5119,215 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="RES-07856"/>
-<attribute name="VALUE" value="1k"/>
+<attribute name="PROD_ID" value="RES-00824"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="100KOHM" urn="urn:adsk.eagle:component:39765/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;100kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-HORIZ-1/4W-1%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39658/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12184"/>
+<attribute name="VALUE" value="100k" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/4W-1%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39656/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12184"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/4W-1%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39653/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12184"/>
+<attribute name="VALUE" value="100k" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-1%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12184"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/4W-5%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39656/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-10686"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/4W-5%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39653/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-10686"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ-1/4W-5%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39658/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-10686"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-5%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-10686"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39650/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-07828"/>
+<attribute name="VALUE" value="100k"/>
+</technology>
+</technologies>
+</device>
+<device name="-0402-1/16W-1%" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39657/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-13495"/>
+<attribute name="VALUE" value="100K"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="470OHM" urn="urn:adsk.eagle:component:39725/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;470Ω resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39650/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-07869"/>
+<attribute name="VALUE" value="470"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="680OHM" urn="urn:adsk.eagle:component:39732/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;680Ω resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-5%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39650/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09333"/>
+<attribute name="VALUE" value="680"/>
 </technology>
 </technologies>
 </device>
@@ -5365,6 +5731,69 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <technology name="">
 <attribute name="PROD_ID" value="CAP-08390"/>
 <attribute name="VALUE" value="0.1uF"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="12PF" urn="urn:adsk.eagle:component:37441/1" prefix="C" uservalue="yes" library_version="1">
+<description>&lt;h3&gt;12pF ceramic capacitors&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-50V-5%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37414/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-09137" constant="no"/>
+<attribute name="VALUE" value="12pF" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="100PF" urn="urn:adsk.eagle:component:37440/1" prefix="C" library_version="1">
+<description>&lt;h3&gt;100pF/0.1nF ceramic capacitors&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-50V-5%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37414/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-07883"/>
+<attribute name="VALUE" value="100pF"/>
+</technology>
+</technologies>
+</device>
+<device name="-0402-50V-5%" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37413/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-13458" constant="no"/>
+<attribute name="VALUE" value="100PF" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8409,6 +8838,327 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Capacitors">
+<description>&lt;h3&gt;SparkFun Capacitors&lt;/h3&gt;
+This library contains capacitors. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="0402">
+<description>&lt;p&gt;&lt;b&gt;Generic 1005 (0402) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
+<wire x1="0.2704" y1="-0.2286" x2="-0.2704" y2="-0.2286" width="0.1524" layer="51"/>
+<wire x1="-1.2" y1="0.65" x2="1.2" y2="0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="0.65" x2="1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="-0.65" x2="-1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="-1.2" y1="-0.65" x2="-1.2" y2="0.65" width="0.0508" layer="39"/>
+<smd name="1" x="-0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<smd name="2" x="0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
+<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
+<package name="0603">
+<description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="0.7" x2="1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="-0.7" x2="-1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
+<package name="CAP-PTH-SMALL-KIT">
+<description>&lt;h3&gt;CAP-PTH-SMALL-KIT&lt;/h3&gt;
+Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.com/products/8375) or 22pF caps (http://www.sparkfun.com/products/8571).&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of this package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.</description>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.254" layer="21"/>
+<wire x1="-2.667" y1="1.27" x2="2.667" y2="1.27" width="0.254" layer="21"/>
+<wire x1="2.667" y1="1.27" x2="2.667" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="2.667" y1="-1.27" x2="-2.667" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="-2.667" y1="-1.27" x2="-2.667" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-1.397" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<pad name="2" x="1.397" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<polygon width="0.127" layer="30">
+<vertex x="-1.4021" y="-0.9475" curve="-90"/>
+<vertex x="-2.357" y="-0.0178" curve="-90.011749"/>
+<vertex x="-1.4046" y="0.9576" curve="-90"/>
+<vertex x="-0.4546" y="-0.0204" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-1.4046" y="-0.4395" curve="-90.012891"/>
+<vertex x="-1.8491" y="-0.0153" curve="-90"/>
+<vertex x="-1.4046" y="0.452" curve="-90"/>
+<vertex x="-0.9627" y="-0.0051" curve="-90.012967"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="1.397" y="-0.9475" curve="-90"/>
+<vertex x="0.4421" y="-0.0178" curve="-90.011749"/>
+<vertex x="1.3945" y="0.9576" curve="-90"/>
+<vertex x="2.3445" y="-0.0204" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="1.3945" y="-0.4395" curve="-90.012891"/>
+<vertex x="0.95" y="-0.0153" curve="-90"/>
+<vertex x="1.3945" y="0.452" curve="-90"/>
+<vertex x="1.8364" y="-0.0051" curve="-90.012967"/>
+</polygon>
+</package>
+<package name="CAP-PTH-10MM">
+<description>2 PTH spaced 10mm apart</description>
+<wire x1="-0.5" y1="0.635" x2="-0.5" y2="0" width="0.2032" layer="21"/>
+<pad name="1" x="-5" y="0" drill="0.9" diameter="1.651"/>
+<pad name="2" x="5" y="0" drill="0.9" diameter="1.651"/>
+<text x="0" y="1" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
+<wire x1="-0.5" y1="0" x2="-0.5" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="0.5" y1="0.635" x2="0.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="0.5" y1="0" x2="0.5" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="0" x2="-3.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="0.5" y1="0" x2="3.5" y2="0" width="0.2032" layer="21"/>
+</package>
+<package name="1206">
+<description>&lt;p&gt;&lt;b&gt;Generic 3216 (1206) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-2.4" y1="1.1" x2="2.4" y2="1.1" width="0.0508" layer="39"/>
+<wire x1="2.4" y1="-1.1" x2="-2.4" y2="-1.1" width="0.0508" layer="39"/>
+<wire x1="-2.4" y1="-1.1" x2="-2.4" y2="1.1" width="0.0508" layer="39"/>
+<wire x1="2.4" y1="1.1" x2="2.4" y2="-1.1" width="0.0508" layer="39"/>
+<wire x1="-0.965" y1="0.787" x2="0.965" y2="0.787" width="0.1016" layer="51"/>
+<wire x1="-0.965" y1="-0.787" x2="0.965" y2="-0.787" width="0.1016" layer="51"/>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="1.8" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="1.8" layer="1"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-1.7018" y1="-0.8509" x2="-0.9517" y2="0.8491" layer="51"/>
+<rectangle x1="0.9517" y1="-0.8491" x2="1.7018" y2="0.8509" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
+<package name="0805">
+<description>&lt;p&gt;&lt;b&gt;Generic 2012 (0805) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.2" layer="1"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.2" layer="1"/>
+<text x="0" y="0.889" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.889" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="-1.5" y1="0.8" x2="1.5" y2="0.8" width="0.0508" layer="39"/>
+<wire x1="1.5" y1="0.8" x2="1.5" y2="-0.8" width="0.0508" layer="39"/>
+<wire x1="1.5" y1="-0.8" x2="-1.5" y2="-0.8" width="0.0508" layer="39"/>
+<wire x1="-1.5" y1="-0.8" x2="-1.5" y2="0.8" width="0.0508" layer="39"/>
+</package>
+<package name="1210">
+<description>&lt;p&gt;&lt;b&gt;Generic 3225 (1210) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.5365" y1="1.1865" x2="1.5365" y2="1.1865" width="0.127" layer="51"/>
+<wire x1="1.5365" y1="1.1865" x2="1.5365" y2="-1.1865" width="0.127" layer="51"/>
+<wire x1="1.5365" y1="-1.1865" x2="-1.5365" y2="-1.1865" width="0.127" layer="51"/>
+<wire x1="-1.5365" y1="-1.1865" x2="-1.5365" y2="1.1865" width="0.127" layer="51"/>
+<smd name="1" x="-1.755" y="0" dx="1.27" dy="2.06" layer="1"/>
+<smd name="2" x="1.755" y="0" dx="1.27" dy="2.06" layer="1"/>
+<text x="0" y="1.397" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.397" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="-2.59" y1="1.45" x2="2.59" y2="1.45" width="0.0508" layer="39"/>
+<wire x1="2.59" y1="1.45" x2="2.59" y2="-1.45" width="0.0508" layer="39"/>
+<wire x1="2.59" y1="-1.45" x2="-2.59" y2="-1.45" width="0.0508" layer="39"/>
+<wire x1="-2.59" y1="-1.45" x2="-2.59" y2="1.45" width="0.0508" layer="39"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CAP">
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
+<text x="1.524" y="2.921" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="1.524" y="-2.159" size="1.778" layer="96" font="vector">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="0.508" x2="2.032" y2="1.016" layer="94"/>
+<rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="0.1UF" prefix="C">
+<description>&lt;h3&gt;0.1µF ceramic capacitors&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0402-16V-10%" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-12416"/>
+<attribute name="VALUE" value="0.1uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-25V-(+80/-20%)" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-00810"/>
+<attribute name="VALUE" value="0.1uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-25V-5%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08604"/>
+<attribute name="VALUE" value="0.1uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-KIT-EZ-50V-20%" package="CAP-PTH-SMALL-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08370"/>
+<attribute name="VALUE" value="0.1uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-100V-10%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08390"/>
+<attribute name="VALUE" value="0.1uF"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10NF" prefix="C">
+<description>&lt;h3&gt;0.01uF/10nF/10,000pF ceramic capacitors&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;
+
+CAP-09321</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-PTH-10MM-10000V-1-%" package="CAP-PTH-10MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-09321"/>
+<attribute name="VALUE" value="10nF"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-50V-10%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-00867"/>
+<attribute name="VALUE" value="10nF"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10UF" prefix="C">
+<description>&lt;h3&gt;10.0µF ceramic capacitors&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-6.3V-20%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-11015"/>
+<attribute name="VALUE" value="10uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-1206-6.3V-20%" package="1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-10057"/>
+<attribute name="VALUE" value="10uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-0805-10V-10%" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-11330"/>
+<attribute name="VALUE" value="10uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-1210-50V-20%" package="1210">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-09824"/>
+<attribute name="VALUE" value="10uF"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8421,59 +9171,36 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <parts>
 <part name="HEADER" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03X2" device="NO_SILK" package3d_urn="urn:adsk.eagle:package:38013/1"/>
 <part name="IC1" library="stm32" deviceset="STM32F10XCXT6" device=""/>
-<part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1k"/>
-<part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1k"/>
 <part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0NF/1000PF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
-<part name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0NF/1000PF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="10uF"/>
 <part name="C3" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0NF/1000PF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1nF"/>
-<part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="1.0uF"/>
-<part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="20pF"/>
-<part name="C11" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="100nF"/>
-<part name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="70ohm"/>
-<part name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="70ohm"/>
+<part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0603-16V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1.0uF"/>
 <part name="D1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
 <part name="D2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
 <part name="GND8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C12" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
-<part name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
 <part name="GND9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="USB_MICRO-B" device="_SMT"/>
-<part name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1.58ohm"/>
-<part name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1.58ohm"/>
-<part name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="4.7k"/>
 <part name="GND10" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND12" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND13" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1M"/>
 <part name="Y1" library="SparkFun-Clocks" library_urn="urn:adsk.eagle:library:511" deviceset="CRYSTAL" device="PTH-HC49US" package3d_urn="urn:adsk.eagle:package:37515/1" value="8MHz"/>
-<part name="C16" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="20pF"/>
 <part name="Y2" library="SparkFun-Clocks" library_urn="urn:adsk.eagle:library:511" deviceset="CRYSTAL" device="PTH-HC49US" package3d_urn="urn:adsk.eagle:package:37515/1" value="32.768MHz"/>
-<part name="C17" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="20pF"/>
-<part name="C18" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="20pF"/>
-<part name="C13" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="100nF"/>
 <part name="GND14" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND15" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C14" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="100nF"/>
 <part name="GND16" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C15" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="100nF"/>
 <part name="GND18" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND19" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="SWD" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="" package3d_urn="urn:adsk.eagle:package:38085/1"/>
-<part name="C22" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0NF/1000PF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
 <part name="GND22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND23" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND24" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="U2" library="SparkFun-Sensors" deviceset="MPU-9250" device="" value="9DoF IMU"/>
-<part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="100nF"/>
 <part name="GND25" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND26" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="10nF"/>
 <part name="GND27" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="100nF"/>
 <part name="GND28" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="POWER_INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="3.5MM" package3d_urn="urn:adsk.eagle:package:38050/1"/>
 <part name="PYRO1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1"/>
@@ -8482,15 +9209,37 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <part name="PYRO2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1"/>
 <part name="Q2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1"/>
 <part name="GND30" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="R14" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470ohm"/>
-<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470ohm"/>
-<part name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1ohm"/>
-<part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1ohm"/>
-<part name="IC2" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="LD117A?*" device="S" technology="33TR"/>
+<part name="IC2" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="LD117A?*" device="S" technology="33TR" value="LD1117AS33TR"/>
 <part name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-5.2-REDUNDANT" package3d_urn="urn:adsk.eagle:package:40167/1" value="SPST-SMD-5.2"/>
 <part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="SERVO_X" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
 <part name="SERVO_Y" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
+<part name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh"/>
+<part name="R15" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh"/>
+<part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="22OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="22"/>
+<part name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="22OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="22"/>
+<part name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
+<part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k"/>
+<part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k"/>
+<part name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="12PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="12pF"/>
+<part name="C8" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="12PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="12pF"/>
+<part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="100pF"/>
+<part name="C16" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="100pF"/>
+<part name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="C17" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="C18" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="C5" library="SparkFun-Capacitors" deviceset="10NF" device="-0603-50V-10%" value="10nF"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="10UF" device="-0603-6.3V-20%" value="10uF"/>
+<part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
+<part name="C7" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
+<part name="C11" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
+<part name="C13" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
+<part name="C14" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
+<part name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
+<part name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
+<part name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="680OHM" device="-0603-1/10W-5%" package3d_urn="urn:adsk.eagle:package:39650/1" value="680"/>
+<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="680OHM" device="-0603-1/10W-5%" package3d_urn="urn:adsk.eagle:package:39650/1" value="680"/>
 </parts>
 <sheets>
 <sheet>
@@ -8536,27 +9285,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <attribute name="VALUE" x="50.8" y="-7.62" size="1.27" layer="95" rot="R180"/>
 <attribute name="NAME" x="50.8" y="-20.32" size="1.27" layer="95" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="17.78" y="78.74" smashed="yes">
-<attribute name="NAME" x="17.78" y="80.264" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="17.78" y="77.216" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R2" gate="G$1" x="-15.24" y="78.74" smashed="yes">
-<attribute name="NAME" x="-15.24" y="80.264" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-15.24" y="77.216" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
 <instance part="GND1" gate="1" x="0" y="60.96" smashed="yes">
 <attribute name="VALUE" x="0" y="60.706" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="GND3" gate="1" x="0" y="114.3" smashed="yes">
 <attribute name="VALUE" x="0" y="114.046" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="C1" gate="G$1" x="40.64" y="121.92" smashed="yes">
-<attribute name="NAME" x="42.164" y="124.841" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="42.164" y="119.761" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="C2" gate="G$1" x="27.94" y="121.92" smashed="yes">
-<attribute name="NAME" x="29.464" y="124.841" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="29.464" y="119.761" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C3" gate="G$1" x="-25.4" y="119.38" smashed="yes">
 <attribute name="NAME" x="-23.876" y="122.301" size="1.778" layer="95" font="vector"/>
@@ -8565,22 +9298,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <instance part="C9" gate="G$1" x="-35.56" y="119.38" smashed="yes">
 <attribute name="NAME" x="-34.036" y="122.301" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="-34.036" y="117.221" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="C10" gate="G$1" x="106.68" y="15.24" smashed="yes" rot="R90">
-<attribute name="NAME" x="103.759" y="16.764" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="108.839" y="16.764" size="1.778" layer="96" font="vector" rot="R90"/>
-</instance>
-<instance part="C11" gate="G$1" x="106.68" y="91.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="109.601" y="89.916" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="104.521" y="89.916" size="1.778" layer="96" font="vector" rot="R270"/>
-</instance>
-<instance part="R3" gate="G$1" x="114.3" y="68.58" smashed="yes">
-<attribute name="NAME" x="114.3" y="70.104" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="114.3" y="67.056" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R4" gate="G$1" x="114.3" y="55.88" smashed="yes">
-<attribute name="NAME" x="114.3" y="57.404" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="114.3" y="54.356" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="D1" gate="G$1" x="129.54" y="68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="134.112" y="65.151" size="1.778" layer="95" font="vector" rot="R180"/>
@@ -8597,28 +9314,12 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <attribute name="NAME" x="131.064" y="20.701" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="131.064" y="15.621" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="R5" gate="G$1" x="129.54" y="33.02" smashed="yes" rot="R90">
-<attribute name="NAME" x="128.016" y="33.02" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="131.064" y="33.02" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
 <instance part="GND9" gate="1" x="129.54" y="7.62" smashed="yes">
 <attribute name="VALUE" x="129.54" y="7.366" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="J3" gate="J1" x="-58.42" y="86.36" smashed="yes">
 <attribute name="VALUE" x="-60.96" y="76.454" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
 <attribute name="NAME" x="-60.96" y="96.774" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="R6" gate="G$1" x="-43.18" y="91.44" smashed="yes">
-<attribute name="NAME" x="-43.18" y="92.964" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-43.18" y="89.916" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R7" gate="G$1" x="-43.18" y="88.9" smashed="yes">
-<attribute name="NAME" x="-43.18" y="90.424" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-43.18" y="87.376" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R8" gate="G$1" x="-35.56" y="81.28" smashed="yes" rot="R90">
-<attribute name="NAME" x="-37.084" y="81.28" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-34.036" y="81.28" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND10" gate="1" x="-45.72" y="76.2" smashed="yes">
 <attribute name="VALUE" x="-45.72" y="75.946" size="1.778" layer="96" align="top-center"/>
@@ -8632,33 +9333,13 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <instance part="GND13" gate="1" x="124.46" y="91.44" smashed="yes" rot="R90">
 <attribute name="VALUE" x="124.714" y="91.44" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="R9" gate="G$1" x="91.44" y="10.16" smashed="yes" rot="R90">
-<attribute name="NAME" x="89.916" y="10.16" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="92.964" y="10.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
 <instance part="Y1" gate="G$1" x="99.06" y="10.16" smashed="yes" rot="R90">
 <attribute name="NAME" x="97.028" y="10.16" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="101.092" y="10.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="C16" gate="G$1" x="106.68" y="5.08" smashed="yes" rot="R90">
-<attribute name="NAME" x="103.759" y="6.604" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="108.839" y="6.604" size="1.778" layer="96" font="vector" rot="R90"/>
-</instance>
 <instance part="Y2" gate="G$1" x="177.8" y="15.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="175.768" y="15.24" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="179.832" y="15.24" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="C17" gate="G$1" x="190.5" y="7.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="187.579" y="9.144" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="192.659" y="9.144" size="1.778" layer="96" font="vector" rot="R90"/>
-</instance>
-<instance part="C18" gate="G$1" x="190.5" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="187.579" y="21.844" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="192.659" y="21.844" size="1.778" layer="96" font="vector" rot="R90"/>
-</instance>
-<instance part="C13" gate="G$1" x="142.24" y="91.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="145.161" y="89.916" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="140.081" y="89.916" size="1.778" layer="96" font="vector" rot="R270"/>
 </instance>
 <instance part="GND14" gate="1" x="160.02" y="91.44" smashed="yes" rot="R90">
 <attribute name="VALUE" x="160.274" y="91.44" size="1.778" layer="96" rot="R90" align="top-center"/>
@@ -8666,19 +9347,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <instance part="GND15" gate="1" x="160.02" y="91.44" smashed="yes" rot="R90">
 <attribute name="VALUE" x="160.274" y="91.44" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="C14" gate="G$1" x="180.34" y="91.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="183.261" y="89.916" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="178.181" y="89.916" size="1.778" layer="96" font="vector" rot="R270"/>
-</instance>
 <instance part="GND16" gate="1" x="198.12" y="91.44" smashed="yes" rot="R90">
 <attribute name="VALUE" x="198.374" y="91.44" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND17" gate="1" x="198.12" y="91.44" smashed="yes" rot="R90">
 <attribute name="VALUE" x="198.374" y="91.44" size="1.778" layer="96" rot="R90" align="top-center"/>
-</instance>
-<instance part="C15" gate="G$1" x="180.34" y="81.28" smashed="yes" rot="R270">
-<attribute name="NAME" x="183.261" y="79.756" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="178.181" y="79.756" size="1.778" layer="96" font="vector" rot="R270"/>
 </instance>
 <instance part="GND18" gate="1" x="198.12" y="81.28" smashed="yes" rot="R90">
 <attribute name="VALUE" x="198.374" y="81.28" size="1.778" layer="96" rot="R90" align="top-center"/>
@@ -8689,10 +9362,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <instance part="SWD" gate="G$1" x="-45.72" y="-15.24" smashed="yes">
 <attribute name="VALUE" x="-50.8" y="-22.606" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="-50.8" y="-7.112" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="C22" gate="G$1" x="-20.32" y="-15.24" smashed="yes">
-<attribute name="NAME" x="-18.796" y="-12.319" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="-18.796" y="-17.399" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="GND22" gate="1" x="-30.48" y="-22.86" smashed="yes">
 <attribute name="VALUE" x="-30.48" y="-23.114" size="1.778" layer="96" align="top-center"/>
@@ -8707,26 +9376,14 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <attribute name="NAME" x="162.56" y="137.414" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="162.56" y="119.126" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="C5" gate="G$1" x="139.7" y="129.54" smashed="yes">
-<attribute name="NAME" x="141.224" y="132.461" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="141.224" y="127.381" size="1.778" layer="96" font="vector"/>
-</instance>
 <instance part="GND25" gate="1" x="139.7" y="121.92" smashed="yes">
 <attribute name="VALUE" x="139.7" y="121.666" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="GND26" gate="1" x="154.94" y="114.3" smashed="yes" rot="R270">
 <attribute name="VALUE" x="154.686" y="114.3" size="1.778" layer="96" rot="R270" align="top-center"/>
 </instance>
-<instance part="C6" gate="G$1" x="142.24" y="114.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="145.161" y="112.776" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="140.081" y="112.776" size="1.778" layer="96" font="vector" rot="R270"/>
-</instance>
 <instance part="GND27" gate="1" x="132.08" y="114.3" smashed="yes" rot="R270">
 <attribute name="VALUE" x="131.826" y="114.3" size="1.778" layer="96" rot="R270" align="top-center"/>
-</instance>
-<instance part="C7" gate="G$1" x="152.4" y="142.24" smashed="yes" rot="R90">
-<attribute name="NAME" x="149.479" y="143.764" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="154.559" y="143.764" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 <instance part="GND28" gate="1" x="139.7" y="142.24" smashed="yes" rot="R270">
 <attribute name="VALUE" x="139.446" y="142.24" size="1.778" layer="96" rot="R270" align="top-center"/>
@@ -8751,22 +9408,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <instance part="GND30" gate="1" x="7.62" y="172.72" smashed="yes">
 <attribute name="VALUE" x="7.62" y="172.466" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R14" gate="G$1" x="-7.62" y="175.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="-9.144" y="175.26" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-6.096" y="175.26" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="R11" gate="G$1" x="-66.04" y="175.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="-67.564" y="175.26" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-64.516" y="175.26" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="R13" gate="G$1" x="17.78" y="190.5" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.78" y="188.976" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="17.78" y="192.024" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
-</instance>
-<instance part="R10" gate="G$1" x="-40.64" y="190.5" smashed="yes" rot="R180">
-<attribute name="NAME" x="-40.64" y="188.976" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="-40.64" y="192.024" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
-</instance>
 <instance part="IC2" gate="G$1" x="0" y="127" smashed="yes">
 <attribute name="NAME" x="2.54" y="119.38" size="1.778" layer="95"/>
 <attribute name="VALUE" x="2.54" y="116.84" size="1.778" layer="96"/>
@@ -8785,6 +9426,110 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <instance part="SERVO_Y" gate="J$1" x="-22.86" y="144.78" smashed="yes">
 <attribute name="VALUE" x="-25.4" y="137.414" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="-25.4" y="150.368" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="R12" gate="G$1" x="-40.64" y="190.5" smashed="yes">
+<attribute name="NAME" x="-40.64" y="192.024" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="-40.64" y="188.976" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R15" gate="G$1" x="17.78" y="190.5" smashed="yes">
+<attribute name="NAME" x="17.78" y="192.024" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="17.78" y="188.976" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R10" gate="G$1" x="-43.18" y="91.44" smashed="yes">
+<attribute name="NAME" x="-43.18" y="92.964" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="-43.18" y="89.916" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R13" gate="G$1" x="-43.18" y="88.9" smashed="yes">
+<attribute name="NAME" x="-43.18" y="90.424" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="-43.18" y="87.376" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R6" gate="G$1" x="-35.56" y="81.28" smashed="yes" rot="R90">
+<attribute name="NAME" x="-37.084" y="81.28" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="-34.036" y="81.28" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R1" gate="G$1" x="-15.24" y="78.74" smashed="yes">
+<attribute name="NAME" x="-15.24" y="80.264" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="-15.24" y="77.216" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R2" gate="G$1" x="17.78" y="78.74" smashed="yes">
+<attribute name="NAME" x="17.78" y="80.264" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="17.78" y="77.216" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="C4" gate="G$1" x="106.68" y="15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="103.759" y="16.764" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="108.839" y="16.764" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C8" gate="G$1" x="106.68" y="5.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="103.759" y="6.604" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="108.839" y="6.604" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C10" gate="G$1" x="190.5" y="20.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="187.579" y="21.844" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="192.659" y="21.844" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C16" gate="G$1" x="190.5" y="7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="187.579" y="9.144" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="192.659" y="9.144" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="R3" gate="G$1" x="129.54" y="33.02" smashed="yes" rot="R90">
+<attribute name="NAME" x="128.016" y="33.02" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="131.064" y="33.02" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="C1" gate="G$1" x="40.64" y="121.92" smashed="yes">
+<attribute name="NAME" x="42.164" y="124.841" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="42.164" y="119.761" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C17" gate="G$1" x="-20.32" y="-15.24" smashed="yes">
+<attribute name="NAME" x="-18.796" y="-12.319" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="-18.796" y="-17.399" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C18" gate="G$1" x="139.7" y="129.54" smashed="yes">
+<attribute name="NAME" x="141.224" y="132.461" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="141.224" y="127.381" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C5" gate="G$1" x="142.24" y="114.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="145.161" y="112.776" size="1.778" layer="95" font="vector" rot="R270"/>
+<attribute name="VALUE" x="140.081" y="112.776" size="1.778" layer="96" font="vector" rot="R270"/>
+</instance>
+<instance part="C2" gate="G$1" x="22.86" y="121.92" smashed="yes">
+<attribute name="NAME" x="24.384" y="124.841" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="24.384" y="119.761" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C6" gate="G$1" x="152.4" y="142.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="149.479" y="143.764" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="154.559" y="143.764" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C7" gate="G$1" x="109.22" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="106.299" y="92.964" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="111.379" y="92.964" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C11" gate="G$1" x="144.78" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="141.859" y="92.964" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="146.939" y="92.964" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C13" gate="G$1" x="182.88" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="179.959" y="92.964" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="185.039" y="92.964" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="C14" gate="G$1" x="182.88" y="81.28" smashed="yes" rot="R90">
+<attribute name="NAME" x="179.959" y="82.804" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="185.039" y="82.804" size="1.778" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="R4" gate="G$1" x="-66.04" y="175.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="-67.564" y="175.26" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="-64.516" y="175.26" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R5" gate="G$1" x="-7.62" y="175.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="-9.144" y="175.26" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="-6.096" y="175.26" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R9" gate="G$1" x="114.3" y="68.58" smashed="yes">
+<attribute name="NAME" x="114.3" y="70.104" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="114.3" y="67.056" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R11" gate="G$1" x="114.3" y="55.88" smashed="yes">
+<attribute name="NAME" x="114.3" y="57.404" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="114.3" y="54.356" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -8808,56 +9553,56 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="22.86" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="7.62" y1="127" x2="27.94" y2="127" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="127" x2="22.86" y2="127" width="0.1524" layer="91"/>
 <label x="58.42" y="127" size="1.778" layer="95"/>
 <pinref part="IC2" gate="G$1" pin="OUT"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="127" x2="40.64" y2="127" width="0.1524" layer="91"/>
-<junction x="27.94" y="127"/>
 <pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="127" x2="40.64" y2="127" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="127" x2="58.42" y2="127" width="0.1524" layer="91"/>
 <junction x="40.64" y="127"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<junction x="22.86" y="127"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="68.58" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
 <label x="104.14" y="68.58" size="1.778" layer="95"/>
+<pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="55.88" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
 <label x="104.14" y="55.88" size="1.778" layer="95"/>
+<pinref part="R11" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="38.1" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
 <label x="129.54" y="43.18" size="1.778" layer="95"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="91.44" x2="93.98" y2="91.44" width="0.1524" layer="91"/>
 <label x="93.98" y="91.44" size="1.778" layer="95"/>
+<pinref part="C7" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="C13" gate="G$1" pin="2"/>
 <wire x1="139.7" y1="91.44" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
 <label x="129.54" y="91.44" size="1.778" layer="95"/>
+<pinref part="C11" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="91.44" x2="167.64" y2="91.44" width="0.1524" layer="91"/>
 <label x="167.64" y="91.44" size="1.778" layer="95"/>
+<pinref part="C13" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="C15" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="81.28" x2="167.64" y2="81.28" width="0.1524" layer="91"/>
 <label x="167.64" y="81.28" size="1.778" layer="95"/>
+<pinref part="C14" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="SWD" gate="G$1" pin="4"/>
 <wire x1="-40.64" y1="-10.16" x2="-20.32" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="C22" gate="G$1" pin="1"/>
 <label x="-20.32" y="-10.16" size="1.778" layer="95"/>
+<pinref part="C17" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="AN_POWER" pin="VDDA"/>
@@ -8879,11 +9624,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="127" y="134.62" size="1.778" layer="95"/>
 <label x="127" y="134.62" size="1.778" layer="95"/>
 <label x="127" y="134.62" size="1.778" layer="95"/>
-<pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="134.62" x2="139.7" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="134.62" x2="127" y2="134.62" width="0.1524" layer="91"/>
-<junction x="139.7" y="134.62"/>
 <pinref part="U2" gate="G$1" pin="!CS"/>
+<wire x1="139.7" y1="134.62" x2="127" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="129.54" x2="208.28" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="129.54" x2="208.28" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="106.68" x2="149.86" y2="106.68" width="0.1524" layer="91"/>
@@ -8895,28 +9638,30 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="149.86" y1="132.08" x2="149.86" y2="134.62" width="0.1524" layer="91"/>
 <junction x="149.86" y="134.62"/>
 <wire x1="147.32" y1="132.08" x2="147.32" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="C18" gate="G$1" pin="1"/>
+<junction x="139.7" y="134.62"/>
+<pinref part="C5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="HEADER" gate="G$1" pin="3"/>
 <wire x1="-10.16" y1="78.74" x2="-7.62" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="HEADER" gate="G$1" pin="4"/>
-<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="78.74" x2="12.7" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="BOOT1" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="78.74" x2="27.94" y2="78.74" width="0.1524" layer="91"/>
 <label x="20.32" y="76.2" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB2"/>
@@ -8926,9 +9671,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </net>
 <net name="BOOT0" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="78.74" x2="-25.4" y2="78.74" width="0.1524" layer="91"/>
 <label x="-25.4" y="78.74" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="RESET" pin="BOOT0"/>
@@ -8979,39 +9724,39 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <segment>
 <pinref part="GND13" gate="1" pin="GND"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-<pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="121.92" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
 <junction x="121.92" y="91.44"/>
+<pinref part="C7" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="GND15" gate="1" pin="GND"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="C13" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="91.44" x2="147.32" y2="91.44" width="0.1524" layer="91"/>
 <junction x="157.48" y="91.44"/>
+<pinref part="C11" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="GND17" gate="1" pin="GND"/>
 <pinref part="GND16" gate="1" pin="GND"/>
-<pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="195.58" y1="91.44" x2="185.42" y2="91.44" width="0.1524" layer="91"/>
 <junction x="195.58" y="91.44"/>
+<pinref part="C13" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="GND19" gate="1" pin="GND"/>
 <pinref part="GND18" gate="1" pin="GND"/>
-<pinref part="C15" gate="G$1" pin="1"/>
 <wire x1="195.58" y1="81.28" x2="185.42" y2="81.28" width="0.1524" layer="91"/>
 <junction x="195.58" y="81.28"/>
+<pinref part="C14" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="SWD" gate="G$1" pin="1"/>
 <wire x1="-40.64" y1="-17.78" x2="-30.48" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="C22" gate="G$1" pin="2"/>
 <wire x1="-30.48" y1="-17.78" x2="-20.32" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="-17.78" x2="-30.48" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-17.78"/>
 <pinref part="GND22" gate="1" pin="GND"/>
+<pinref part="C17" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="AN_POWER" pin="VSSA"/>
@@ -9029,9 +9774,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="25.4" y1="-2.54" x2="25.4" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="GND25" gate="1" pin="GND"/>
 <wire x1="139.7" y1="127" x2="139.7" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="C18" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
@@ -9039,12 +9784,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <pinref part="GND26" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C6" gate="G$1" pin="2"/>
 <pinref part="GND27" gate="1" pin="GND"/>
 <wire x1="139.7" y1="114.3" x2="134.62" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="GND28" gate="1" pin="GND"/>
 <wire x1="142.24" y1="142.24" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="FSYNC"/>
@@ -9052,6 +9796,7 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="152.4" y1="127" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="137.16" x2="147.32" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="137.16" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
 <junction x="147.32" y="142.24"/>
 </segment>
 <segment>
@@ -9062,7 +9807,7 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="-60.96" y1="175.26" x2="-50.8" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="170.18" x2="-60.96" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="170.18" x2="-60.96" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
@@ -9072,16 +9817,15 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="-2.54" y1="175.26" x2="7.62" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="170.18" x2="-2.54" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="170.18" x2="-2.54" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="R14" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="C18" gate="G$1" pin="2"/>
-<pinref part="C17" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="20.32" x2="193.04" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="12.7" x2="193.04" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="12.7" x2="193.04" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="15.24" x2="193.04" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="15.24" x2="198.12" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="C16" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
@@ -9095,14 +9839,14 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="-55.88" y1="119.38" x2="-55.88" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="IC2" gate="G$1" pin="ADJ"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="119.38" x2="27.94" y2="119.38" width="0.1524" layer="91"/>
-<junction x="27.94" y="119.38"/>
-<wire x1="27.94" y1="119.38" x2="0" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="119.38" x2="22.86" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="119.38" x2="0" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="0" y1="119.38" x2="0" y2="116.84" width="0.1524" layer="91"/>
 <junction x="0" y="119.38"/>
 <junction x="0" y="116.84"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<junction x="22.86" y="119.38"/>
 </segment>
 <segment>
 <pinref part="SERVO_X" gate="J$1" pin="1"/>
@@ -9122,9 +9866,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="-43.18" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="-35.56" y1="76.2" x2="-35.56" y2="71.12" width="0.1524" layer="91"/>
 <label x="-35.56" y="71.12" size="1.778" layer="95"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="-7.62" y1="127" x2="-25.4" y2="127" width="0.1524" layer="91"/>
@@ -9164,16 +9908,16 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="119.38" y1="68.58" x2="127" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="119.38" y1="55.88" x2="127" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="PC13" class="0">
@@ -9196,7 +9940,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </segment>
 <segment>
 <wire x1="121.92" y1="27.94" x2="129.54" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
 <junction x="129.54" y="27.94"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="129.54" y1="27.94" x2="129.54" y2="22.86" width="0.1524" layer="91"/>
@@ -9204,20 +9947,21 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="142.24" y="27.94" size="1.778" layer="95"/>
 <wire x1="121.92" y1="27.94" x2="121.92" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="S1" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="J3" gate="J1" pin="D-"/>
-<pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="91.44" x2="-48.26" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="PA11" class="0">
 <segment>
-<pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="-38.1" y1="91.44" x2="-33.02" y2="91.44" width="0.1524" layer="91"/>
 <label x="-33.02" y="91.44" size="1.778" layer="95"/>
+<pinref part="R10" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="PORTA_H" pin="PA11"/>
@@ -9228,19 +9972,19 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <net name="N$8" class="0">
 <segment>
 <pinref part="J3" gate="J1" pin="D+"/>
-<pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="88.9" x2="-48.26" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="PA12" class="0">
 <segment>
-<pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="-38.1" y1="88.9" x2="-35.56" y2="88.9" width="0.1524" layer="91"/>
 <label x="-33.02" y="88.9" size="1.778" layer="95"/>
 <wire x1="-35.56" y1="88.9" x2="-33.02" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="88.9" x2="-35.56" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-35.56" y="88.9"/>
-<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="PORTA_H" pin="PA12"/>
@@ -9258,15 +10002,12 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <pinref part="IC1" gate="PORTD/OSC" pin="PD0/OSC&lt;="/>
 <wire x1="81.28" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="10.16" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="15.24" x2="91.44" y2="15.24" width="0.1524" layer="91"/>
-<junction x="91.44" y="15.24"/>
-<wire x1="91.44" y1="15.24" x2="99.06" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="15.24" x2="99.06" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="Y1" gate="G$1" pin="2"/>
 <wire x1="99.06" y1="15.24" x2="101.6" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="15.24" x2="99.06" y2="12.7" width="0.1524" layer="91"/>
 <junction x="99.06" y="15.24"/>
-<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -9274,24 +10015,21 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <pinref part="IC1" gate="PORTD/OSC" pin="PD1/OSC=&gt;"/>
 <wire x1="81.28" y1="7.62" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="7.62" x2="86.36" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="5.08" x2="91.44" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="5.08" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
-<junction x="91.44" y="5.08"/>
+<wire x1="86.36" y1="5.08" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="Y1" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="7.62" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="5.08" x2="101.6" y2="5.08" width="0.1524" layer="91"/>
 <junction x="99.06" y="5.08"/>
-<pinref part="C16" gate="G$1" pin="1"/>
+<pinref part="C8" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="15.24" x2="111.76" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="15.24" x2="111.76" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="C16" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="5.08" x2="109.22" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C8" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="PC14" class="0">
@@ -9299,10 +10037,10 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="160.02" y1="20.32" x2="177.8" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="Y2" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="20.32" x2="177.8" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="C18" gate="G$1" pin="1"/>
 <wire x1="185.42" y1="20.32" x2="177.8" y2="20.32" width="0.1524" layer="91"/>
 <junction x="177.8" y="20.32"/>
 <label x="160.02" y="20.32" size="1.778" layer="95" rot="R90"/>
+<pinref part="C10" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="PORTC" pin="PC14"/>
@@ -9317,8 +10055,8 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="177.8" y1="12.7" x2="177.8" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="7.62" x2="185.42" y2="7.62" width="0.1524" layer="91"/>
 <junction x="177.8" y="7.62"/>
-<pinref part="C17" gate="G$1" pin="1"/>
 <label x="160.02" y="7.62" size="1.778" layer="95" rot="R90"/>
+<pinref part="C16" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="PORTC" pin="PC15"/>
@@ -9449,9 +10187,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </segment>
 <segment>
 <pinref part="Q1" gate="G$1" pin="G"/>
-<wire x1="-71.12" y1="180.34" x2="-66.04" y2="180.34" width="0.1524" layer="91"/>
 <label x="-71.12" y="180.34" size="1.778" layer="95"/>
-<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="-71.12" y1="180.34" x2="-66.04" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="-66.04" y1="180.34" x2="-55.88" y2="180.34" width="0.1524" layer="91"/>
 <junction x="-66.04" y="180.34"/>
 </segment>
@@ -9464,9 +10202,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="-12.7" y1="180.34" x2="-7.62" y2="180.34" width="0.1524" layer="91"/>
 <label x="-12.7" y="180.34" size="1.778" layer="95"/>
-<pinref part="R14" gate="G$1" pin="2"/>
+<wire x1="-12.7" y1="180.34" x2="-7.62" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="180.34" x2="2.54" y2="180.34" width="0.1524" layer="91"/>
 <junction x="-7.62" y="180.34"/>
 </segment>
@@ -9608,15 +10346,15 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <segment>
 <pinref part="U2" gate="G$1" pin="REGOUT"/>
 <wire x1="157.48" y1="124.46" x2="154.94" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="124.46" x2="154.94" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="PYRO1" gate="G$1" pin="2"/>
 <wire x1="-30.48" y1="190.5" x2="-35.56" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -9624,14 +10362,14 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="-45.72" y1="190.5" x2="-50.8" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="-50.8" y1="190.5" x2="-50.8" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R12" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="PYRO2" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="190.5" x2="22.86" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="1"/>
+<pinref part="R15" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -9639,7 +10377,7 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="12.7" y1="190.5" x2="7.62" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="7.62" y1="190.5" x2="7.62" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="R15" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

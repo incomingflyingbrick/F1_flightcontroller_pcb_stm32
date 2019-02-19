@@ -1,51 +1,110 @@
-Partlist exported from /Users/yazhoujiang/Documents/EAGLE/projects/F1_FLIGHT_CONTROLLER/stm32f103_fc.sch at 2019/2/18 9:47 AM
-
-Part        Value         Device                                  Package                  Description                                                                                                     PROD_ID    SF_ID     SF_SKU    VALUE   
-C1          100nF         1.0NF/1000PF-0603-50V-10%               0603                     1nF/1,000pF ceramic capacitors                                                                                  CAP-07886                      1nF     
-C2          10uF          1.0NF/1000PF-0603-50V-10%               0603                     1nF/1,000pF ceramic capacitors                                                                                  CAP-07886                      1nF     
-C3          1nF           1.0NF/1000PF-0603-50V-10%               0603                     1nF/1,000pF ceramic capacitors                                                                                  CAP-07886                      1nF     
-C5          100nF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C6          10nF          1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C7          100nF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C9          1.0uF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C10         20pF          1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C11         100nF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C12         100nF         0.1UF-0603-25V-(+80/-20%)               0603                     0.1µF ceramic capacitors                                                                                        CAP-00810                      0.1uF   
-C13         100nF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C14         100nF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C15         100nF         1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C16         20pF          1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C17         20pF          1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C18         20pF          1.0UF-0805-25V-(+80/-20%)               0805                     1µF ceramic capacitors                                                                                          CAP-11625                      1.0uF   
-C22         100nF         1.0NF/1000PF-0603-50V-10%               0603                     1nF/1,000pF ceramic capacitors                                                                                  CAP-07886                      1nF     
-D1          GREEN         LED-GREEN0603                           LED-0603                 Green SMD LED                                                                                                   DIO-00821                      GREEN   
-D2          GREEN         LED-GREEN0603                           LED-0603                 Green SMD LED                                                                                                   DIO-00821                      GREEN   
-HEADER                    CONN_03X2NO_SILK                        2X3-NS                   Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                                        
-IC1         STM32F10XCXT6 STM32F10XCXT6                           TQFP48                   ST STM32F101/103 48pin LQFP                                                                                                                            
-IC2         LD117AS33TR   LD117AS33TR                             SOT223                   Low drop fixed and adjustable positive voltage regulators 1 A                                                                                          
-J3                        USB_MICRO-B_SMT                         USB-MICROB               USB Type Micro-B Connector                                                                                      CONN-09505 PRT-08533                   
-J5          1X2-3.5MM     1X2-3.5MM                               1X2-3.5MM                3.5mm Terminal block                                                                                                                                   
-J6          1X2-3.5MM     1X2-3.5MM                               1X2-3.5MM                3.5mm Terminal block                                                                                                                                   
-POWER_INPUT               CONN_023.5MM                            SCREWTERMINAL-3.5MM-2    Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections CONN-08399                             
-Q1                        MOSFET-NGDS_TO220V                      TO220V                   N-Channel Mosfet                                                                                                                                       
-Q2                        MOSFET-NGDS_TO220V                      TO220V                   N-Channel Mosfet                                                                                                                                       
-R1          1k            1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R2          1k            1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R3          70ohm         1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R4          70ohm         1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R5          10k           1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R6          1.58ohm       1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R7          1.58ohm       1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R8          4.7k          1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R9          1M            1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R10         1ohm          1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R11         470ohm        1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R13         1ohm          1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-R14         470ohm        1KOHM-0603-1/10W-1%                     0603                     1kΩ resistor                                                                                                    RES-07856                      1k      
-S1          SPST-SMD-5.2  MOMENTARY-SWITCH-SPST-SMD-5.2-REDUNDANT TACTILE_SWITCH_SMD_5.2MM Momentary Switch (Pushbutton) - SPST                                                                            SWCH-08247           COM-08720         
-SERVO_X                   CONN_03                                 1X03                     Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                                        
-SERVO_Y                   CONN_03                                 1X03                     Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                                        
-SWD                       CONN_04                                 1X04                     Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections CONN-09696                             
-U2          9DoF IMU      MPU-9250                                QFN24-3X3                MPU-9250 9 Degree of Freedom IMU                                                                                IC-13192                       9DoF IMU
-Y1          8MHz          CRYSTALPTH-HC49US                       HC49US                   Crystals (Generic)                                                                                                                                     
-Y2          32.768MHz     CRYSTALPTH-HC49US                       HC49US                   Crystals (Generic)                                                                                                                                     
+%
+M48
+M72
+T01C0.01378
+T02C0.02756
+T03C0.03937
+T04C0.04000
+T05C0.04724
+T06C0.11614
+%
+T01
+X88800Y103800
+X91300Y106925
+X101300Y106300
+X101300Y96300
+X142550Y143175
+X130050Y164425
+X136925Y173175
+X125050Y180050
+X115050Y172550
+X117550Y164425
+X106925Y167550
+X104425Y164425
+X118800Y191300
+X133800Y192550
+X137550Y192550
+X156300Y195786
+X159425Y189425
+X156300Y186300
+X156300Y181300
+X168175Y177550
+X171300Y190050
+X171300Y198175
+X163175Y163175
+X167550Y145675
+X178800Y138175
+X186300Y137550
+X189425Y130675
+X193175Y145050
+X206300Y131300
+X191300Y111300
+X173175Y114425
+X164425Y101300
+X171300Y96300
+X168800Y86300
+X165161Y81300
+X176300Y81578
+X186300Y81300
+X206300Y61300
+X221300Y111300
+X180675Y161925
+X170050Y130675
+X156300Y231300
+X163175Y241925
+X157550Y251300
+X148175Y261925
+X141300Y243800
+X133175Y236925
+X107550Y261925
+X86300Y276300
+X83800Y271300
+X68800Y271300
+X71925Y241925
+X82550Y239425
+X85675Y236925
+X71300Y196925
+X45675Y170675
+X173800Y256925
+X183800Y238800
+X190050Y236300
+X206300Y271300
+X216300Y256300
+X226300Y281300
+X231300Y321300
+T02
+X141300Y131300
+X121300Y131300
+X51300Y171300
+X51300Y191300
+T03
+X57993Y126300
+X44213Y126300
+X44607Y86300
+X58387Y86300
+T04
+X121300Y86300
+X121300Y96300
+X131300Y96300
+X131300Y86300
+X141300Y86300
+X141300Y96300
+X231300Y191300
+X231300Y201300
+X231300Y211300
+X231300Y291300
+X231300Y301300
+X231300Y311300
+X146300Y316300
+X136300Y316300
+X126300Y316300
+X116300Y316300
+T05
+X216300Y236300
+X230080Y236300
+T06
+X41300Y61300
+X241300Y61300
+X241300Y336300
+X41300Y336300
+M30
