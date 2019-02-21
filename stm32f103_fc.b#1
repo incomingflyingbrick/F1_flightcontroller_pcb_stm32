@@ -148,7 +148,7 @@
 <wire x1="72.06" y1="11.43" x2="72.06" y2="99.05" width="0" layer="20"/>
 <wire x1="72.06" y1="99.05" x2="7.62" y2="99.05" width="0" layer="20"/>
 <wire x1="7.62" y1="99.05" x2="7.62" y2="11.43" width="0" layer="20"/>
-<text x="29.21" y="93.98" size="1.778" layer="21">SPACE PIRATE V1.0.0</text>
+<text x="27.94" y="95.25" size="1.778" layer="21">SPACE PIRATE V1.0.0</text>
 <hole x="10.16" y="96.52" drill="2.95"/>
 <hole x="69.85" y="96.52" drill="2.95"/>
 <hole x="10.16" y="13.97" drill="2.95"/>
