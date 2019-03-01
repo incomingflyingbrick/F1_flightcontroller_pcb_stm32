@@ -1667,15 +1667,15 @@ design rules under a new name.</description>
 <attribute name="NAME" x="30.48" y="35.56" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="35.56" y="35.56" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
-<element name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh" x="14.303959375" y="5.7886625" smashed="yes">
-<attribute name="NAME" x="14.303959375" y="6.5506625" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-08269" x="14.303959375" y="5.7886625" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="14.303959375" y="5.0266625" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh" x="66.4637125" y="75.538775" smashed="yes">
+<attribute name="NAME" x="66.4637125" y="76.300775" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-08269" x="66.4637125" y="75.538775" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="66.4637125" y="74.776775" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh" x="14.342059375" y="2.547625" smashed="yes">
-<attribute name="NAME" x="14.342059375" y="3.309625" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-08269" x="14.342059375" y="2.547625" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="14.342059375" y="1.785625" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh" x="66.52564375" y="71.0311125" smashed="yes">
+<attribute name="NAME" x="66.52564375" y="71.7931125" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-08269" x="66.52564375" y="71.0311125" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="66.52564375" y="70.2691125" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -2456,12 +2456,12 @@ design rules under a new name.</description>
 <signal name="N$17">
 <contactref element="SERVO_X" pad="2"/>
 <contactref element="R7" pad="1"/>
-<wire x1="13.453959375" y1="5.7886625" x2="67.31" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="67.31" y1="49.53" x2="65.6137125" y2="75.538775" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$18">
 <contactref element="R8" pad="1"/>
 <contactref element="SERVO_Y" pad="2"/>
-<wire x1="13.492059375" y1="2.547625" x2="63.5" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="63.5" y1="49.53" x2="65.67564375" y2="71.0311125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="9V">
 <contactref element="C3" pad="1"/>
@@ -2509,11 +2509,11 @@ design rules under a new name.</description>
 <wire x1="63.5" y1="27.305246875" x2="61.50900625" y2="29.296240625" width="0.508" layer="1"/>
 <wire x1="61.50900625" y1="30.353025" x2="63.5" y2="32.34401875" width="0.508" layer="1"/>
 <contactref element="J3" pad="VBUS"/>
+<wire x1="63.5" y1="77.47" x2="67.3137125" y2="75.538775" width="0" layer="19" extent="1-16"/>
 <wire x1="66.704571875" y1="49.53" x2="65.02734375" y2="51.0755375" width="0" layer="19" extent="1-1"/>
 <wire x1="63.5" y1="26.14" x2="63.5" y2="27.305246875" width="0" layer="19" extent="1-1"/>
+<wire x1="67.37564375" y1="71.0311125" x2="67.3137125" y2="75.538775" width="0" layer="19" extent="1-1"/>
 <wire x1="31.72" y1="17.89" x2="61.50900625" y2="29.296240625" width="0" layer="19" extent="1-1"/>
-<wire x1="15.153959375" y1="5.7886625" x2="31.72" y2="17.89" width="0" layer="19" extent="1-1"/>
-<wire x1="15.192059375" y1="2.547625" x2="15.153959375" y2="5.7886625" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
