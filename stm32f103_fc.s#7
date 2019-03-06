@@ -9292,8 +9292,8 @@ BUZZER</description>
 <part name="GND3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0NF/1000PF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1nF"/>
 <part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-0603-16V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1.0uF"/>
-<part name="LED1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
-<part name="LED2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
+<part name="LED1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="BL-HGE36G-AV-TRB"/>
+<part name="LED2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="BL-HGE36G-AV-TRB"/>
 <part name="GND8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C12" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
 <part name="GND9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
@@ -9306,13 +9306,12 @@ BUZZER</description>
 <part name="GND22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="POWER_INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="3.5MM" package3d_urn="urn:adsk.eagle:package:38050/1"/>
 <part name="PY1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1" value="1X2-3.5MM KF350 terminal block"/>
-<part name="Q1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1"/>
+<part name="N-CHANNEL-MOSFET" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1" value="2N7002KT1G"/>
 <part name="GND31" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="PY2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1" value="1X2-3.5MM KF350 terminal block"/>
-<part name="Q2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1"/>
+<part name="N-CHANNEL-MOSFET-2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1" value="2N7002KT1G"/>
 <part name="GND30" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="IC2" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="LD117A?*" device="S" technology="33TR" value="LD1117AS33TR"/>
-<part name="SWITCH" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-5.2-REDUNDANT" package3d_urn="urn:adsk.eagle:package:40167/1" value="SPST-SMD-5.2*5.2mm push button"/>
 <part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="SERVO_X" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1" value="2.54mm 3P header "/>
 <part name="SERVO_Y" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1" value="2.54mm 3P header"/>
@@ -9356,6 +9355,7 @@ BUZZER</description>
 <part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
 <part name="C18" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
 <part name="GND12" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="SWITCH" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-4.5MM" package3d_urn="urn:adsk.eagle:package:40162/1" value="MOMENTARY-SWITCH-SPST-SMD-4.5MM-轻触开关"/>
 </parts>
 <sheets>
 <sheet>
@@ -9460,7 +9460,7 @@ BUZZER</description>
 <attribute name="NAME" x="-66.04" y="124.968" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="PY1" gate="G$1" x="-25.4" y="190.5" smashed="yes"/>
-<instance part="Q1" gate="G$1" x="-53.34" y="182.88" smashed="yes">
+<instance part="N-CHANNEL-MOSFET" gate="G$1" x="-53.34" y="182.88" smashed="yes">
 <attribute name="NAME" x="-48.26" y="183.515" size="1.27" layer="95"/>
 <attribute name="VALUE" x="-48.26" y="181.61" size="1.27" layer="96"/>
 </instance>
@@ -9468,7 +9468,7 @@ BUZZER</description>
 <attribute name="VALUE" x="-50.8" y="172.466" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="PY2" gate="G$1" x="33.02" y="190.5" smashed="yes"/>
-<instance part="Q2" gate="G$1" x="5.08" y="182.88" smashed="yes">
+<instance part="N-CHANNEL-MOSFET-2" gate="G$1" x="5.08" y="182.88" smashed="yes">
 <attribute name="NAME" x="10.16" y="183.515" size="1.27" layer="95"/>
 <attribute name="VALUE" x="10.16" y="181.61" size="1.27" layer="96"/>
 </instance>
@@ -9478,10 +9478,6 @@ BUZZER</description>
 <instance part="IC2" gate="G$1" x="0" y="127" smashed="yes">
 <attribute name="NAME" x="2.54" y="119.38" size="1.778" layer="95"/>
 <attribute name="VALUE" x="2.54" y="116.84" size="1.778" layer="96"/>
-</instance>
-<instance part="SWITCH" gate="G$1" x="121.92" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="120.396" y="20.32" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="122.428" y="20.32" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND2" gate="1" x="200.66" y="15.24" smashed="yes" rot="R90">
 <attribute name="VALUE" x="200.914" y="15.24" size="1.778" layer="96" rot="R90" align="top-center"/>
@@ -9643,6 +9639,10 @@ BUZZER</description>
 </instance>
 <instance part="GND12" gate="1" x="35.56" y="12.7" smashed="yes" rot="R180">
 <attribute name="VALUE" x="35.56" y="12.954" size="1.778" layer="96" rot="R180" align="top-center"/>
+</instance>
+<instance part="SWITCH" gate="G$1" x="121.92" y="20.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="120.396" y="20.32" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="122.428" y="20.32" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -9839,7 +9839,7 @@ BUZZER</description>
 <junction x="-20.32" y="-17.78"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="S"/>
+<pinref part="N-CHANNEL-MOSFET" gate="G$1" pin="S"/>
 <wire x1="-50.8" y1="177.8" x2="-50.8" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="GND31" gate="1" pin="GND"/>
 <junction x="-50.8" y="175.26"/>
@@ -9849,7 +9849,7 @@ BUZZER</description>
 <pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="Q2" gate="G$1" pin="S"/>
+<pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="S"/>
 <wire x1="7.62" y1="177.8" x2="7.62" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="GND30" gate="1" pin="GND"/>
 <junction x="7.62" y="175.26"/>
@@ -10016,8 +10016,8 @@ BUZZER</description>
 <wire x1="129.54" y1="27.94" x2="142.24" y2="27.94" width="0.1524" layer="91"/>
 <label x="142.24" y="27.94" size="1.778" layer="95"/>
 <wire x1="121.92" y1="27.94" x2="121.92" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="SWITCH" gate="G$1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="SWITCH" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -10245,7 +10245,7 @@ BUZZER</description>
 <label x="27.94" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="G"/>
+<pinref part="N-CHANNEL-MOSFET" gate="G$1" pin="G"/>
 <label x="-71.12" y="180.34" size="1.778" layer="95"/>
 <wire x1="-71.12" y1="180.34" x2="-66.04" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -10260,7 +10260,7 @@ BUZZER</description>
 <label x="27.94" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="Q2" gate="G$1" pin="G"/>
+<pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="G"/>
 <label x="-12.7" y="180.34" size="1.778" layer="95"/>
 <wire x1="-12.7" y1="180.34" x2="-7.62" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
@@ -10393,7 +10393,7 @@ BUZZER</description>
 <net name="N$15" class="0">
 <segment>
 <wire x1="-45.72" y1="190.5" x2="-50.8" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
+<pinref part="N-CHANNEL-MOSFET" gate="G$1" pin="D"/>
 <wire x1="-50.8" y1="190.5" x2="-50.8" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 </segment>
@@ -10408,7 +10408,7 @@ BUZZER</description>
 <net name="N$13" class="0">
 <segment>
 <wire x1="12.7" y1="190.5" x2="7.62" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
+<pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="D"/>
 <wire x1="7.62" y1="190.5" x2="7.62" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 </segment>
