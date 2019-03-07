@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-03-07T09:35:07Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.3.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.99,
+        "LayerNumber": 4,
+        "Name": {
+            "ProjectId": "stm32f103_fc"
+        },
+        "Owner": "pduddleston miller <pduddleston2@student.cccs.edu>",
+        "Size": {
+            "X": 37.671963,
+            "Y": 72.012394
+        }
+    }
+}
