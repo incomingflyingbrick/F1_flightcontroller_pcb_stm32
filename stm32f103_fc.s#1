@@ -9306,7 +9306,7 @@ BUZZER</description>
 <part name="GND22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="POWER_INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="3.5MM" package3d_urn="urn:adsk.eagle:package:38050/1" value="KF350-2P-terminal-block-接线端子"/>
 <part name="PY2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1" value="1X2-3.5MM KF350 terminal block"/>
-<part name="N-CHANNEL-MOSFET-2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1" value="2N7002KT1G"/>
+<part name="MOSFET-2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1" value="2N7002KT1G"/>
 <part name="IC2" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="LD117A?*" device="S" technology="33TR" value="LD1117AS33TR"/>
 <part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="SERVO_X" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1" value="2.54mm 3P header "/>
@@ -9352,7 +9352,7 @@ BUZZER</description>
 <part name="R14" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470omh"/>
 <part name="GND13" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="PY1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1" value="1X2-3.5MM KF350 terminal block"/>
-<part name="N-CHANNEL-MOSFET-1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1" value="2N7002KT1G"/>
+<part name="MOSFET-1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MOSFET-N" device="REFLOW" package3d_urn="urn:adsk.eagle:package:6240836/1" value="2N7002KT1G"/>
 <part name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1omh"/>
 <part name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470omh"/>
 <part name="GND14" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
@@ -9460,7 +9460,7 @@ BUZZER</description>
 <attribute name="NAME" x="-66.04" y="124.968" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="PY2" gate="G$1" x="35.56" y="172.72" smashed="yes"/>
-<instance part="N-CHANNEL-MOSFET-2" gate="G$1" x="5.08" y="182.88" smashed="yes">
+<instance part="MOSFET-2" gate="G$1" x="5.08" y="182.88" smashed="yes">
 <attribute name="NAME" x="10.16" y="183.515" size="1.27" layer="95"/>
 <attribute name="VALUE" x="10.16" y="181.61" size="1.27" layer="96"/>
 </instance>
@@ -9629,7 +9629,7 @@ BUZZER</description>
 <attribute name="VALUE" x="7.62" y="198.374" size="1.778" layer="96" rot="R180" align="top-center"/>
 </instance>
 <instance part="PY1" gate="G$1" x="-22.86" y="175.26" smashed="yes"/>
-<instance part="N-CHANNEL-MOSFET-1" gate="G$1" x="-53.34" y="185.42" smashed="yes">
+<instance part="MOSFET-1" gate="G$1" x="-53.34" y="185.42" smashed="yes">
 <attribute name="NAME" x="-48.26" y="186.055" size="1.27" layer="95"/>
 <attribute name="VALUE" x="-48.26" y="184.15" size="1.27" layer="96"/>
 </instance>
@@ -9960,7 +9960,7 @@ BUZZER</description>
 <wire x1="-5.08" y1="193.04" x2="7.62" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 <wire x1="7.62" y1="193.04" x2="7.62" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="D"/>
+<pinref part="MOSFET-2" gate="G$1" pin="D"/>
 <wire x1="7.62" y1="187.96" x2="7.62" y2="193.04" width="0.1524" layer="91"/>
 <junction x="7.62" y="193.04"/>
 <junction x="-5.08" y="193.04"/>
@@ -9970,7 +9970,7 @@ BUZZER</description>
 <wire x1="-63.5" y1="195.58" x2="-50.8" y2="195.58" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
 <wire x1="-50.8" y1="195.58" x2="-50.8" y2="198.12" width="0.1524" layer="91"/>
-<pinref part="N-CHANNEL-MOSFET-1" gate="G$1" pin="D"/>
+<pinref part="MOSFET-1" gate="G$1" pin="D"/>
 <wire x1="-50.8" y1="190.5" x2="-50.8" y2="195.58" width="0.1524" layer="91"/>
 <junction x="-50.8" y="195.58"/>
 <junction x="-63.5" y="195.58"/>
@@ -10245,7 +10245,7 @@ BUZZER</description>
 <label x="27.94" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="N-CHANNEL-MOSFET-1" gate="G$1" pin="G"/>
+<pinref part="MOSFET-1" gate="G$1" pin="G"/>
 <label x="-71.12" y="182.88" size="1.778" layer="95"/>
 <wire x1="-71.12" y1="182.88" x2="-63.5" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="1"/>
@@ -10261,7 +10261,7 @@ BUZZER</description>
 <label x="27.94" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="G"/>
+<pinref part="MOSFET-2" gate="G$1" pin="G"/>
 <label x="-12.7" y="180.34" size="1.778" layer="95"/>
 <wire x1="-12.7" y1="180.34" x2="-5.08" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="R14" gate="G$1" pin="1"/>
@@ -10396,7 +10396,7 @@ BUZZER</description>
 <segment>
 <wire x1="15.24" y1="172.72" x2="7.62" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="1"/>
-<pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="S"/>
+<pinref part="MOSFET-2" gate="G$1" pin="S"/>
 <wire x1="7.62" y1="177.8" x2="7.62" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10494,7 +10494,7 @@ BUZZER</description>
 <segment>
 <wire x1="-43.18" y1="175.26" x2="-50.8" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="N-CHANNEL-MOSFET-1" gate="G$1" pin="S"/>
+<pinref part="MOSFET-1" gate="G$1" pin="S"/>
 <wire x1="-50.8" y1="180.34" x2="-50.8" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>

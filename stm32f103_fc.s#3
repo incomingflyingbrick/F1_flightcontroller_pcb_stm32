@@ -9963,6 +9963,7 @@ BUZZER</description>
 <pinref part="N-CHANNEL-MOSFET-2" gate="G$1" pin="D"/>
 <wire x1="7.62" y1="187.96" x2="7.62" y2="193.04" width="0.1524" layer="91"/>
 <junction x="7.62" y="193.04"/>
+<junction x="-5.08" y="193.04"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
@@ -9972,6 +9973,7 @@ BUZZER</description>
 <pinref part="N-CHANNEL-MOSFET-1" gate="G$1" pin="D"/>
 <wire x1="-50.8" y1="190.5" x2="-50.8" y2="195.58" width="0.1524" layer="91"/>
 <junction x="-50.8" y="195.58"/>
+<junction x="-63.5" y="195.58"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -10242,6 +10244,15 @@ BUZZER</description>
 <wire x1="35.56" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
 <label x="27.94" y="55.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="N-CHANNEL-MOSFET-1" gate="G$1" pin="G"/>
+<label x="-71.12" y="182.88" size="1.778" layer="95"/>
+<wire x1="-71.12" y1="182.88" x2="-63.5" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="182.88" x2="-55.88" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="185.42" x2="-63.5" y2="182.88" width="0.1524" layer="91"/>
+<junction x="-63.5" y="182.88"/>
+</segment>
 </net>
 <net name="PB6" class="0">
 <segment>
@@ -10257,15 +10268,6 @@ BUZZER</description>
 <wire x1="-5.08" y1="180.34" x2="2.54" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="182.88" x2="-5.08" y2="180.34" width="0.1524" layer="91"/>
 <junction x="-5.08" y="180.34"/>
-</segment>
-<segment>
-<pinref part="N-CHANNEL-MOSFET-1" gate="G$1" pin="G"/>
-<label x="-71.12" y="182.88" size="1.778" layer="95"/>
-<wire x1="-71.12" y1="182.88" x2="-63.5" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="-63.5" y1="182.88" x2="-55.88" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="185.42" x2="-63.5" y2="182.88" width="0.1524" layer="91"/>
-<junction x="-63.5" y="182.88"/>
 </segment>
 </net>
 <net name="PB5" class="0">
