@@ -9355,7 +9355,7 @@ BUZZER</description>
 <part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
 <part name="C18" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
 <part name="GND12" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="SWITCH" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-4.5MM" package3d_urn="urn:adsk.eagle:package:40162/1"/>
+<part name="SWITCH" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-4.5MM" package3d_urn="urn:adsk.eagle:package:40162/1" value="MOMENTARY-SWITCH-SPST-SMD-4.5MM-轻触开关"/>
 </parts>
 <sheets>
 <sheet>

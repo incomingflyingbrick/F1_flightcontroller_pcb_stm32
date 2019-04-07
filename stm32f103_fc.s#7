@@ -9297,7 +9297,7 @@ BUZZER</description>
 <part name="GND8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C12" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37414/1" value="100nF"/>
 <part name="GND9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="USB" library="SparkFun-Connectors" deviceset="USB_MICRO-B" device="_SMT"/>
+<part name="MICRO-USB" library="SparkFun-Connectors" deviceset="USB_MICRO-B" device="_SMT" value="Micro-USB-5P-无柱-SMD"/>
 <part name="GND10" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="Y1" library="SparkFun-Clocks" library_urn="urn:adsk.eagle:library:511" deviceset="CRYSTAL" device="PTH-HC49US" package3d_urn="urn:adsk.eagle:package:37515/1" value="8MHz"/>
@@ -9430,7 +9430,7 @@ BUZZER</description>
 <instance part="GND9" gate="1" x="129.54" y="7.62" smashed="yes">
 <attribute name="VALUE" x="129.54" y="7.366" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="USB" gate="J1" x="-58.42" y="86.36" smashed="yes">
+<instance part="MICRO-USB" gate="J1" x="-58.42" y="86.36" smashed="yes">
 <attribute name="VALUE" x="-60.96" y="76.454" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
 <attribute name="NAME" x="-60.96" y="96.774" size="1.778" layer="95" font="vector"/>
 </instance>
@@ -9816,9 +9816,9 @@ BUZZER</description>
 <pinref part="SWITCH" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="USB" gate="J1" pin="ID"/>
+<pinref part="MICRO-USB" gate="J1" pin="ID"/>
 <wire x1="-53.34" y1="86.36" x2="-50.8" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="USB" gate="J1" pin="GND"/>
+<pinref part="MICRO-USB" gate="J1" pin="GND"/>
 <wire x1="-53.34" y1="83.82" x2="-50.8" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="83.82" x2="-45.72" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="83.82" x2="-45.72" y2="78.74" width="0.1524" layer="91"/>
@@ -10022,7 +10022,7 @@ BUZZER</description>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="USB" gate="J1" pin="D-"/>
+<pinref part="MICRO-USB" gate="J1" pin="D-"/>
 <wire x1="-53.34" y1="91.44" x2="-48.26" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 </segment>
@@ -10041,7 +10041,7 @@ BUZZER</description>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="USB" gate="J1" pin="D+"/>
+<pinref part="MICRO-USB" gate="J1" pin="D+"/>
 <wire x1="-53.34" y1="88.9" x2="-48.26" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 </segment>
@@ -10491,7 +10491,7 @@ BUZZER</description>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="USB" gate="J1" pin="VBUS"/>
+<pinref part="MICRO-USB" gate="J1" pin="VBUS"/>
 <wire x1="-53.34" y1="93.98" x2="-25.4" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 </segment>
